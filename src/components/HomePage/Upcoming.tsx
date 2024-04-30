@@ -9,7 +9,7 @@ const Upcoming = () => {
   return (
     <div>
       <ScrollArea>
-        <div className="flex w-max space-x-4 p-4">
+        <div className="flex w-full space-x-4 p-4">
           {data?.events.map((item) => (
             <div className="size-36 bg-blue-600" key={item.eventName}>
               {item.eventName}
@@ -21,7 +21,7 @@ const Upcoming = () => {
             </div>
           ))}
         </div>
-        <ScrollBar orientation="horizontal" className="hidden" />
+        <ScrollBar orientation="vertical" className="hidden" />
       </ScrollArea>
     </div>
   );
