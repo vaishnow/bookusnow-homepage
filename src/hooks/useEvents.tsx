@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { EventResp } from "@/components/types/types";
+import { EventResp } from "@/types/types";
 import eventsApi from "@/api/eventsApi";
 
 type Props = {

@@ -1,4 +1,4 @@
-import { EventDetails } from "../types/types";
+import { EventDetails } from "../../types/types";
 
 type Props = {
 	data:EventDetails

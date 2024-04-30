@@ -17,10 +17,7 @@ const Recommended = () => {
       <ScrollArea>
         <div className="flex w-max space-x-4 p-4">
           {recommendedEvents?.map((item) => (
-            <div className="size-36 bg-blue-600" key={item.eventName}>
-              {item.eventName}
-              <img src={getGDriveLink(item.imgUrl)} alt="" className="size-full" />
-            </div>
+            <RecoCard data={item} />
           ))}
         </div>
         <ScrollBar orientation="horizontal" className="hidden" />
