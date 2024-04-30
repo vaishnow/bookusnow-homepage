@@ -1,4 +1,4 @@
-import { ScrollArea, ScrollBar } from "./ui/scroll-area";
+import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 
 const Recommended = () => {
   return (

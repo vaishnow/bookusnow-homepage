@@ -1,6 +1,6 @@
-import Hero from "@/components/Hero";
-import Recommended from "@/components/Recommended";
-import Upcoming from "@/components/Upcoming";
+import Hero from "@/components/HomePage/Hero";
+import Recommended from "@/components/HomePage/Recommended";
+import Upcoming from "@/components/HomePage/Upcoming";
 
 const HomePage = () => {
   return (
