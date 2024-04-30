@@ -1,6 +1,10 @@
-type Props = {};
+import { EventDetails } from "../types/types";
 
-const Card = (props: Props) => {
+type Props = {
+	data:EventDetails
+};
+
+const Card = ({data}: Props) => {
   return <div>Card</div>;
 };
 

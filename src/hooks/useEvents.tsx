@@ -1,26 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
+import { EventResp } from "@/components/types/types";
 import eventsApi from "@/api/eventsApi";
 
 type Props = {
   type?: string;
   page?: number;
-};
-
-type EventDetails = {
-  cityName: string;
-  date: string;
-  distanceKm: string;
-  eventName: string;
-  imgUrl: string;
-  weather: string;
-};
-
-type EventResp = {
-  events: EventDetails[];
-  page: number;
-  pageSize: number;
-  totalEvents: number;
-  totalPages: number;
 };
 
 const useEvents = ({ page = 1, type }: Props) => {
