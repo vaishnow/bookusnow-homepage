@@ -25,7 +25,7 @@ const Recommended = () => {
         <ScrollArea className="overflow-visible">
           <div className="flex w-max space-x-4 py-4">
             {recommendedEvents?.map((item) => (
-              <RecoCard data={item} />
+              <RecoCard data={item} key={item.eventName}/>
             ))}
           </div>
           <ScrollBar orientation="horizontal" className="hidden" />

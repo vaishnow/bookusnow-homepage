@@ -21,7 +21,7 @@ const Navbar = () => {
       </button>
       <ul className="flex">
         {navLinks.map(({ name, url }) => (
-          <li>
+          <li key={name}>
             <a className="p-3 mx-4" href={url}>
               {name}
             </a>
