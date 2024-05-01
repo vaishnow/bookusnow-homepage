@@ -2,7 +2,7 @@ import banner from "@/assets/banner.webp";
 
 const Hero = () => {
   return (
-    <section className="h-[90vh] bg-transparent flex w-full text-[#f3f3f3] text-center text-balance relative">
+    <section className="h-screen bg-transparent flex w-full text-[#f3f3f3] text-center text-balance relative">
       <div className="m-auto px-[8%] pb-40">
         <h1 className="text-[4rem] font-semibold">
           Discover Exciting Events Happening Near You – Stay Tuned for Updates!

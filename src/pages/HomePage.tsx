@@ -6,8 +6,10 @@ const HomePage = () => {
   return (
     <div>
       <Hero />
-      <Recommended />
-      <Upcoming />
+      <div className="ps-[5%]">
+        <Recommended />
+        <Upcoming />
+      </div>
     </div>
   );
 };
