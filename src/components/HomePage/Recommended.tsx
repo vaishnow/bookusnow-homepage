@@ -16,10 +16,13 @@ const Recommended = () => {
   return (
     <div className="relative h-96">
       <div className="absolute top-0 z-10 -translate-y-36 w-full">
-        <h3 className="text-white flex items-center text-xl font-medium">
-          Recommended Shows <FaArrowRightLong className="ms-5" />
-        </h3>
-        <ScrollArea>
+        <div className="text-white flex justify-between items-center pe-[5%]">
+          <h3 className="flex items-center text-2xl font-medium">
+            Recommended Shows <FaArrowRightLong className="ms-5" />
+          </h3>
+          <a href="#" className="p-3 underline underline-offset-4">See all</a>
+        </div>
+        <ScrollArea className="overflow-visible">
           <div className="flex w-max space-x-4 py-4">
             {recommendedEvents?.map((item) => (
               <RecoCard data={item} />
