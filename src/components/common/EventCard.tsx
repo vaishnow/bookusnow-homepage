@@ -12,13 +12,15 @@ import { getFormattedWeatherandDistance } from "@/utils/events.utils";
 
 type Props = {
   data: EventDetails;
+  reference?: (node: HTMLDivElement) => void;
 };
 
 const EventCard = ({
   data: { cityName, date, distanceKm, eventName, imgUrl, weather },
+  reference,
 }: Props) => {
   return (
-    <Card className="mb-14 p-3 mx-[1px] border-bun-stroke">
+    <Card ref={reference} className="mb-14 p-3 mx-[1px] border-bun-stroke">
       <CardContent className="mb-8 overflow-hidden w-96 h-64 rounded-xl relative">
         <img
           src={getGDriveLink(imgUrl)}
