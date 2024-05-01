@@ -4,8 +4,8 @@ type Props = {
 	data:EventDetails
 };
 
-const Card = ({data}: Props) => {
+const EventCard = ({data}: Props) => {
   return <div>Card</div>;
 };
 
-export default Card;
+export default EventCard;
