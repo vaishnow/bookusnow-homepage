@@ -1,25 +1,17 @@
-import { useCallback, useRef } from "react";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { ScrollBar } from "../ui/scroll-area";
 import useInfiniteEvents from "@/hooks/useInfiniteEvents";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import EventCard from "@/components/common/EventCard";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Upcoming = () => {
-  const observer = useRef<IntersectionObserver | null>(null);
-
-  const { data, fetchNextPage, hasNextPage ,isFetching,isLoading} = useInfiniteEvents({
+  const { data, fetchNextPage, isFetching } = useInfiniteEvents({
     type: "upcoming",
   });
 
-  const triggerRef = useCallback(
-    (node: HTMLDivElement) => {
-      if (observer.current) observer.current.disconnect();
-      observer.current = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting) fetchNextPage();
-      });
-      if (node) observer.current.observe(node);
-    },
+  const triggerRef = useIntersectionObserver<HTMLDivElement>(
+    () => fetchNextPage(),
     [isFetching]
   );
 
