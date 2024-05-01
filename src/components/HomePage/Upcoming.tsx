@@ -1,24 +1,21 @@
 import useEvents from "@/hooks/useEvents";
-import { getGDriveLink } from "@/utils/gDrive.utils";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { ScrollBar } from "../ui/scroll-area";
+import EventCard from "@/components/common/EventCard";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const Upcoming = () => {
   const { data } = useEvents({ type: "upcoming" });
 
   return (
     <div>
+      <h3 className="flex items-center text-2xl font-medium mb-5 ">
+        Upcoming Events <FaArrowRightLong className="ms-5" />
+      </h3>
       <ScrollArea>
-        <div className="flex w-full space-x-4 p-4">
-          {data?.events.map((item) => (
-            <div className="size-36 bg-blue-600" key={item.eventName}>
-              {item.eventName}
-              <img
-                src={getGDriveLink(item.imgUrl)}
-                alt={item.eventName}
-                className="size-full"
-              />
-            </div>
+        <div className="flex flex-wrap justify-between w-full ">
+          {data?.events.map((data) => (
+            <EventCard data={data} />
           ))}
         </div>
         <ScrollBar orientation="vertical" className="hidden" />

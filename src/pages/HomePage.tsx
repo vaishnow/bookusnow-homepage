@@ -8,6 +8,8 @@ const HomePage = () => {
       <Hero />
       <div className="ps-[5%]">
         <Recommended />
+      </div>
+      <div className="px-[5%]">
         <Upcoming />
       </div>
     </div>
