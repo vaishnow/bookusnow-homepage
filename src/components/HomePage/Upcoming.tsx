@@ -18,9 +18,9 @@ const Upcoming = () => {
 
   return (
     <div>
-      <h3 className="flex items-center text-xl font-medium mb-5 ">
+      <h2 className="flex items-center text-xl font-medium mb-5 ">
         Upcoming Events <FaArrowRightLong className="ms-5" />
-      </h3>
+      </h2>
       <ScrollArea>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-4 justify-between w-full ">
           {data?.pages.map((resp, pageIndex, pageArr) =>
