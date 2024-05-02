@@ -1,5 +1,6 @@
 import { ChevronRightIcon } from "@radix-ui/react-icons";
 import { TiLocation } from "react-icons/ti";
+import styles from "@/styles/common/scroll.module.css"
 
 const Navbar = () => {
   const navLinks = [
@@ -13,16 +14,16 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex w-full justify-center items-center relative">
-      <button className="flex items-center absolute left-0 text-bun-ash ">
+    <nav className="flex max-md:flex-col w-full justify-center items-center relative">
+      <button className="flex items-center lg:absolute self-start max-md:mb-3 left-0 text-bun-ash">
         <TiLocation className="size-5" />
-        <span className="mx-3 text-sm text-black">Mumbai, India</span>
+        <span className="text-sm text-black whitespace-nowrap">Mumbai, India</span>
         <ChevronRightIcon />
       </button>
-      <ul className="flex">
+      <ul className={`flex w-full md:justify-center space-x-6 lg:space-x-10 overflow-y-hidden overflow-x-scroll ${styles.scrollHidden}`}>
         {navLinks.map(({ name, url }) => (
           <li key={name}>
-            <a className="p-3 mx-4" href={url}>
+            <a className="whitespace-nowrap" href={url}>
               {name}
             </a>
           </li>
