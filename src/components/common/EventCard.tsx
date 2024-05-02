@@ -25,7 +25,7 @@ const EventCard = ({
         <img
           src={getGDriveLink(imgUrl)}
           alt={eventName}
-          className="w-50 scale-[1.30] origin-center object-cover"
+          className="size-full scale-[1.30] origin-center object-cover"
           loading="lazy"
         />
         <div className="absolute bottom-0 bg-[#0008] h-10  text-white p-2 ps-5 inset-x-0">
