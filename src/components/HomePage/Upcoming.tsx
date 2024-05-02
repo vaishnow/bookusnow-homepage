@@ -3,6 +3,7 @@ import { ScrollBar } from "../ui/scroll-area";
 import useInfiniteEvents from "@/hooks/useInfiniteEvents";
 import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 import EventCard from "@/components/common/EventCard";
+import EventCardSkeleton from "@/components/common/EventCardSkeleton";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Upcoming = () => {
@@ -36,6 +37,7 @@ const Upcoming = () => {
               />
             ))
           )}
+          {isFetching && <EventCardSkeleton amount={8} />}
         </div>
         <ScrollBar orientation="vertical" className="hidden" />
       </ScrollArea>
