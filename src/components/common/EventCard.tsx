@@ -21,7 +21,7 @@ const EventCard = ({
 }: Props) => {
   return (
     <Card ref={reference} className="mb-14 p-3 mx-[1px] border-bun-stroke max-w-full">
-      <CardContent className="mb-8 overflow-hidden w-96 max-w-full aspect-[3/2] rounded-xl relative">
+      <CardContent className="mb-8 overflow-hidden w-full aspect-[3/2] rounded-xl relative">
         <img
           src={getGDriveLink(imgUrl)}
           alt={eventName}
