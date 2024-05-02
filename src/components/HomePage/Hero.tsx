@@ -1,3 +1,5 @@
+import bannerSm from "@/assets/banner-sm.webp";
+import bannerMd from "@/assets/banner-md.webp";
 import banner from "@/assets/banner.webp";
 
 const Hero = () => {
@@ -14,7 +16,14 @@ const Hero = () => {
           beatae laboriosam sint?
         </p>
       </div>
-      <img src={banner} alt="BookUsNow Banner" className="absolute -z-10 size-full inset-0 m-auto object-cover object-top" />
+      <img
+        src={banner}
+        srcSet={` ${bannerSm} 600w,
+                  ${bannerMd} 900w,
+                  ${banner} 1200w`}
+        role="presentation"
+        className="absolute -z-10 size-full inset-0 m-auto object-cover object-top"
+      />
     </section>
   );
 };
