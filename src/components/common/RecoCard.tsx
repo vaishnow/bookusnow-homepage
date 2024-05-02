@@ -12,7 +12,7 @@ const RecoCard = ({
   data: { cityName, date, distanceKm, eventName, imgUrl, weather },
 }: Props) => {
   return (
-    <div className="relative w-[280px] h-[420px] overflow-hidden rounded-xl bg-black">
+    <div className="relative w-[270px] aspect-[2/3] overflow-hidden rounded-xl bg-black">
       <img
         src={getGDriveLink(imgUrl)}
         alt={eventName}
