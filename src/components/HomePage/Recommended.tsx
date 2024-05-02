@@ -3,11 +3,14 @@ import { ScrollArea, ScrollBar } from "../ui/scroll-area";
 import { useEffect, useState } from "react";
 import RecoCard from "@/components/common/RecoCard";
 import { FaArrowRightLong } from "react-icons/fa6";
+import useIntersectionObserver from "@/hooks/useIntersectionObserver";
 
 const Recommended = () => {
   const { data } = useEvents({ type: "reco" });
-
+  
   const [recommendedEvents, setRecommendedEvents] = useState(data?.events);
+
+  const triggerRef = useIntersectionObserver<HTMLDivElement>(()=>setRecommendedEvents(prev=>prev?.concat(...data!.events)),[]) 
 
   useEffect(() => {
     setRecommendedEvents(data?.events);
@@ -24,8 +27,8 @@ const Recommended = () => {
         </div>
         <ScrollArea className="overflow-visible">
           <div className="flex w-max space-x-4 py-4">
-            {recommendedEvents?.map((item) => (
-              <RecoCard data={item} key={item.eventName}/>
+            {recommendedEvents?.map((item,index,arr) => (
+              <RecoCard data={item} reference={index===arr.length-1?triggerRef:undefined} key={item.eventName}/>
             ))}
           </div>
           <ScrollBar orientation="horizontal" className="hidden" />
