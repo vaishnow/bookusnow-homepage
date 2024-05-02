@@ -15,7 +15,10 @@ const Navbar = () => {
 
   return (
     <nav className="flex max-md:flex-col w-full justify-center items-center relative">
-      <button className="flex items-center lg:absolute self-start max-md:mb-3 left-0 text-bun-ash">
+      <button
+        aria-label="Location"
+        className="flex items-center lg:absolute self-start max-md:mb-3 left-0 text-bun-ash"
+      >
         <TiLocation className="size-5" />
         <span className="text-sm text-black whitespace-nowrap">Mumbai, India</span>
         <ChevronRightIcon />

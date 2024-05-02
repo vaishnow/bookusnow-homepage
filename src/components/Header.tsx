@@ -12,7 +12,10 @@ const Header = () => {
       <div className="flex justify-between items-center md:mb-4">
         <h1 className="font-extrabold text-bun-red w-40 text-lg">BookUsNow</h1>
         <div className="hidden md:flex items-center relative w-3/5 space-x-2">
-          <Button className="bg-black text-white">
+          <Button
+            aria-label="Toggle navigation"
+            className="bg-black text-white"
+          >
             <GiHamburgerMenu className="me-2" />
             Categories
           </Button>
@@ -26,15 +29,16 @@ const Header = () => {
           </div>
         </div>
         <div className="flex">
-          <Button variant="link" className="md:hidden">
+          <Button variant="link" aria-label="Search" className="md:hidden">
             <AiOutlineSearch className="size-4 text-bun-ash" />
           </Button>
-          <Button variant="link">
+          <Button variant="link" aria-label="Favourite">
             <PiHeartStraightFill className="text-bun-ash size-4" />
             <span className="max-md:hidden ms-2">Favourites</span>
           </Button>
           <Button
             variant="link"
+            aria-label="User"
             className="border md:border-bun-stroke max-md:border-0"
           >
             <FaUser className="md:hidden text-bun-ash " />
